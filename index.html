@@ -1,1 +1,253 @@
-LISTO LA PRUEBA INICIAL
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 3 - Componentes Bootstrap 5</title>
+    <link href="public/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap 5</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Componentes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
+                            <li><a class="dropdown-item" href="#botones">Botones</a></li>
+                            <li><a class="dropdown-item" href="#tarjetas">Tarjetas</a></li>
+                            <li><a class="dropdown-item" href="#formularios">Formularios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-4">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Componentes</li>
+            </ol>
+        </nav>
+
+        <!-- Alerts -->
+        <section id="alertas" class="my-4">
+            <h2>Alertas <span class="badge bg-secondary">Nuevo</span></h2>
+            <div class="alert alert-primary" role="alert">
+                Alerta primaria - <a href="#" class="alert-link">enlace alerta primaria</a>.
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Éxito!</strong> Alerta exitosa con botón de cierre.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            <div class="alert alert-warning" role="alert">
+                Alerta de advertencia.
+            </div>
+            <div class="alert alert-danger" role="alert">
+                Alerta de peligro.
+            </div>
+        </section>
+
+        <!-- Badges -->
+        <section class="my-4">
+            <h2>Badges</h2>
+            <h4>Ejemplo de membrete <span class="badge bg-primary">Nuevo</span></h4>
+            <button type="button" class="btn btn-primary">
+                Notificaciones <span class="badge bg-light text-dark">4</span>
+            </button>
+            <span class="badge rounded-pill bg-success">Success</span>
+            <span class="badge bg-info">Info</span>
+            <span class="badge bg-warning text-dark">Warning</span>
+            <span class="badge bg-danger">Danger</span>
+        </section>
+
+        <!-- Botons -->
+        <section id="botones" class="my-4">
+            <h2>Botones</h2>
+            
+            <h4>Estilos de botones</h4>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-link">Link</button>
+            
+            <h4 class="mt-3">Botones con contorno</h4>
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+            
+            <h4 class="mt-3">Tamaños de botones</h4>
+            <button type="button" class="btn btn-primary btn-lg">Botón grande</button>
+            <button type="button" class="btn btn-primary">Botón normal</button>
+            <button type="button" class="btn btn-primary btn-sm">Botón pequeño</button>
+            
+            <h4 class="mt-3">Grupo de botones</h4>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary">Izquierda</button>
+                <button type="button" class="btn btn-primary">Centro</button>
+                <button type="button" class="btn btn-primary">Derecha</button>
+            </div>
+            
+            <div class="btn-group mt-2" role="group">
+                <button type="button" class="btn btn-outline-primary">Grupo 1</button>
+                <button type="button" class="btn btn-outline-primary">Grupo 2</button>
+                <button type="button" class="btn btn-outline-primary">Grupo 3</button>
+                <button type="button" class="btn btn-outline-primary">Grupo 4</button>
+            </div>
+            
+            <h4 class="mt-3">Dropdown en botones</h4>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Menú desplegable
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                    <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Carrusel -->
+        <section class="my-4">
+            <h2>Carrusel</h2>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100 bg-primary text-white text-center p-5" style="height: 300px;">
+                            <h3>Primer elemento</h3>
+                            <p>Contenido 1</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-success text-white text-center p-5" style="height: 300px;">
+                            <h3>Segundo elemento</h3>
+                            <p>Contenido 2</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-warning text-dark text-center p-5" style="height: 300px;">
+                            <h3>Tercer elemento</h3>
+                            <p>Contenido 3</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Collapse -->
+        <section class="my-4">
+            <h2>Collapse</h2>
+            
+            <h4>Collapse simple</h4>
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample">
+                    Enlace con href
+                </a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+                    Botón con data-bs-target
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Contenido colapsable. Se muestra al hacer clic en los botones anteriores.
+                </div>
+            </div>
+            
+            <h4 class="mt-3">Acordeón</h4>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Elemento del acordeón #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Contenido del primer elemento del acordeón.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Elemento del acordeón #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Contenido del segundo elemento del acordeón.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Elemento del acordeón #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Contenido del tercer elemento del acordeón.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </div>
+<footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Bootstrap 5 Componentes</h5>
+                    <p>Grupo #3 pagina de demostración bootstrap-5</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Tarea Grupal 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="public/vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>
