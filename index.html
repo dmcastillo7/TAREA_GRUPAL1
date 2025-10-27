@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 3 - Componentes Bootstrap 5</title>
     <link href="public/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -124,7 +125,8 @@
                 <button type="button" class="btn btn-outline-primary">Grupo 3</button>
                 <button type="button" class="btn btn-outline-primary">Grupo 4</button>
             </div>
-            
+
+            <!-- Dropdown -->
             <h4 class="mt-3">Dropdown en botones</h4>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
@@ -236,7 +238,111 @@
                     </div>
                 </div>
             </div>
-        </section>        
+         <!-- Navs-Tabs -->
+        </section> 
+        <section id="navs-tabs" class="my-4">
+        <h2>Navs / Tabs / Pills</h2>
+        <hr>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Pestaña 1</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pestaña 2</button>
+          </li>
+        </ul>
+        <div class="tab-content border p-3" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            Contenido de la pestaña 1.
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            Contenido de la pestaña 2.
+          </div>
+        </div>
+      </section>
+
+       <!-- Pagination -->
+      <section id="pagination" class="my-4">
+        <h2>Pagination</h2>
+        <hr>
+        <nav aria-label="Ejemplo de paginación">
+          <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+          </ul>
+        </nav>
+      </section>
+
+       <!-- List Group -->
+      <section id="list-group" class="my-4">
+        <h2>List Group</h2>
+        <hr>
+        <ul class="list-group" style="max-width: 400px;">
+          <li class="list-group-item active" aria-current="true">Elemento activo</li>
+          <li class="list-group-item">Segundo elemento</li>
+          <li class="list-group-item">Tercer elemento</li>
+        </ul>
+      </section>
+
+        <!-- Modal -->
+      <section id="modal" class="my-4">
+        <h2>Modal (funcional)</h2>
+        <hr>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModalEjemplo">
+          Abrir Modal
+        </button>
+        <div class="modal fade" id="miModalEjemplo" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="miModalLabel">Título del Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ¡Este es el contenido de mi modal!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+         <!-- Toasts -->
+      <section id="toasts" class="my-4">
+        <h2>Toasts (funcional)</h2>
+        <hr>
+        <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Notificación</strong>
+              <small>Justo ahora</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              ¡Hola! Este es un mensaje de Toast.
+            </div>
+          </div>
+        </div>
+      </section>
+
+         <!-- Popovers -->
+      <section id="popovers" class="my-4">
+        <h2>Popovers (funcional)</h2>
+        <hr>
+        <button type="button" 
+                class="btn btn-lg btn-danger" 
+                data-bs-toggle="popover" 
+                title="Título del Popover" 
+                data-bs-content="Este es el contenido del popover. Funciona gracias al JS.">
+          Haz clic aquí para ver el Popover
+        </button>
+      </section>       
     </div>
 <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
@@ -252,5 +358,6 @@
         </div>
     </footer>
     <script src="public/vendor/bootstrap.bundle.min.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
 </html>
