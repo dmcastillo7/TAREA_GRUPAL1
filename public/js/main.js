@@ -22,5 +22,35 @@ document.addEventListener("DOMContentLoaded", function() {
       toast.show();
     });
   }
+//Alejandro Simba
+// Inicializar Tooltips
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+  new bootstrap.Tooltip(el);
+});
 
+// Inicializar Offcanvas (no requiere código especial, solo se activa con Bootstrap.bundle)
+
+// Inicializar Progress Bar animadas (ejemplo opcional de actualización dinámica)
+document.querySelectorAll('.progress-bar').forEach(bar => {
+  const value = bar.getAttribute('aria-valuenow');
+  if (value) {
+    bar.style.width = value + '%';
+  }
+});
+
+// Inicializar Spinner: nada adicional (se muestra automáticamente con el HTML)
+
+// Validación de formularios Bootstrap
+(function () {
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
 });

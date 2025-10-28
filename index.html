@@ -356,6 +356,164 @@
                 </div>
             </div>
         </div>
+      <!-- Tooltips Alejandro Simba-->
+      <section id="tooltips" class="my-4">
+        <h2>Tooltips (funcional)</h2>
+        <hr>
+        <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip arriba">
+          Arriba
+        </button>
+        <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip derecha">
+          Derecha
+        </button>
+        <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip abajo">
+          Abajo
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip izquierda">
+          Izquierda
+        </button>
+      </section>
+
+      <!-- Progress Alejandro Simba -->
+      <section id="progress" class="my-4">
+        <h2>Progress</h2>
+        <hr>
+        <div class="mb-3">
+          <div class="progress" style="height: 22px;">
+            <div class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 40%"></div>
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 20%"></div>
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 65%"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spinners  Alejandro Simba -->
+      <section id="spinners" class="my-4">
+        <h2>Spinner</h2>
+        <hr>
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="spinner-border" role="status" aria-label="Cargando"></div>
+          <div class="spinner-grow" role="status" aria-label="Cargando"></div>
+          <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Cargando...
+          </button>
+          <button class="btn btn-outline-secondary" type="button" disabled>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Procesando
+          </button>
+        </div>
+      </section>
+
+      <!-- Offcanvas (panel lateral)  Alejandro Simba -->
+      <section id="offcanvas" class="my-4">
+        <h2>Offcanvas (panel lateral)</h2>
+        <hr>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDemo">
+          Abrir panel lateral
+        </button>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDemo" aria-labelledby="offcanvasDemoLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDemoLabel">Menú lateral</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Este es un panel lateral tipo offcanvas.</p>
+            <ul class="list-group mb-3">
+              <li class="list-group-item"><a href="#alertas">Ir a Alertas</a></li>
+              <li class="list-group-item"><a href="#botones">Ir a Botones</a></li>
+              <li class="list-group-item"><a href="#formularios">Ir a Formularios</a></li>
+            </ul>
+            <button class="btn btn-success" type="button" data-bs-dismiss="offcanvas">Listo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formularios  Alejandro Simba -->
+      <section id="formularios" class="my-4">
+        <h2>Formularios y elementos de entrada</h2>
+        <hr>
+
+        <!-- Form con validación de cliente (Bootstrap)  Alejandro Simba -->
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="inputNombre" class="form-label">Nombre (text)</label>
+            <input type="text" class="form-control" id="inputNombre" placeholder="Juan Pérez" required>
+            <div class="invalid-feedback">El nombre es obligatorio.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Correo (email)</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="nombre@correo.com" required>
+            <div class="invalid-feedback">Ingresa un correo válido.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Contraseña (password)</label>
+            <input type="password" class="form-control" id="inputPassword" minlength="6" required>
+            <div class="invalid-feedback">Mínimo 6 caracteres.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputNumero" class="form-label">Edad (number)</label>
+            <input type="number" class="form-control" id="inputNumero" min="1" max="120" required>
+            <div class="invalid-feedback">Ingresa un número entre 1 y 120.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputUrl" class="form-label">Sitio web (url)</label>
+            <input type="url" class="form-control" id="inputUrl" placeholder="https://ejemplo.com">
+            <div class="invalid-feedback">Ingresa una URL válida iniciando con http(s)://.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputFecha" class="form-label">Fecha (date)</label>
+            <input type="date" class="form-control" id="inputFecha" required>
+            <div class="invalid-feedback">Selecciona una fecha.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="inputTextarea" class="form-label">Descripción (textarea)</label>
+            <textarea class="form-control" id="inputTextarea" rows="3" required></textarea>
+            <div class="invalid-feedback">La descripción no puede estar vacía.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputSelect" class="form-label">Select (nativo)</label>
+            <select id="inputSelect" class="form-select" required>
+              <option selected disabled value="">Elige una opción...</option>
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
+            </select>
+            <div class="invalid-feedback">Selecciona una opción.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputSelectSm" class="form-label">form-select (tamaño pequeño)</label>
+            <select id="inputSelectSm" class="form-select form-select-sm">
+              <option>Pequeño 1</option>
+              <option>Pequeño 2</option>
+              <option>Pequeño 3</option>
+            </select>
+          </div>    
+          <div class="col-12 d-flex gap-2">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-outline-secondary" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
     </footer>
     <script src="public/vendor/bootstrap.bundle.min.js"></script>
     <script src="public/js/main.js"></script>
