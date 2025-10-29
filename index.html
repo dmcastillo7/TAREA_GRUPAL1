@@ -500,6 +500,233 @@
             <button class="btn btn-outline-secondary" type="reset">Limpiar</button>
           </div>
         </form>
+        <!--Form layout: horizontal (grid), vertical y inline    Evelyn Condoy -->
+        <h3 class="mt-5">Más Componentes y Layouts</h3>
+        <p>A continuación, se muestran más controles, grupos y layouts de formularios.</p>
+
+        <form class="row g-3 needs-validation" novalidate>
+
+          <fieldset>
+            <h3>Layout Horizontal (con Grid)</h3>
+            <div class="row mb-3">
+              <label for="inputHorizontalEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputHorizontalEmail" required>
+                <div class="invalid-feedback">Se requiere un email en formato horizontal.</div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputHorizontalPass" class="col-sm-2 col-form-label">Contraseña</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputHorizontalPass" required>
+                <div class="invalid-feedback">Se requiere contraseña.</div>
+              </div>
+            </div>
+          </fieldset>
+          
+          <hr class="my-4">
+          <fieldset>
+            <h3>Layout Vertical (Default)</h3>
+            <div class="mb-3">
+              <label for="inputVerticalEmail" class="form-label">Email Vertical</label>
+              <input type="email" class="form-control" id="inputVerticalEmail" placeholder="nombre@ejemplo.com" required>
+              <div class="invalid-feedback">Este campo es obligatorio.</div>
+              <div class="form-text">
+                Este es un texto de ayuda (form-text).
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputVerticalPass" class="form-label">Contraseña Vertical</label>
+              <input type="password" class="form-control" id="inputVerticalPass" required>
+              <div class="invalid-feedback">La contraseña no puede estar vacía.</div>
+            </div>
+          </fieldset>
+
+          <hr class="my-4">
+
+          <fieldset>
+            <h3>Layout Inline (con Grid Auto-Cols)</h3>
+            <div class="row row-cols-lg-auto g-3 align-items-center">
+              <div class="col-12">
+                <label class="visually-hidden" for="inlineUser">Usuario</label>
+                <div class="input-group">
+                  <div class="input-group-text">@</div>
+                  <input type="text" class="form-control" id="inlineUser" placeholder="Username" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="visually-hidden" for="inlinePass">Clave</label>
+                <input type="password" class="form-control" id="inlinePass" placeholder="Contraseña" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="inlineCheck">
+                  <label class="form-check-label" for="inlineCheck">
+                    Recordarme
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="my-4">
+
+          <fieldset class="col-12">
+            <!--Floating Labels  Evelyn Condoy -->
+            <h3>Floating Labels</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
+                  <label for="floatingInput">Email</label>
+                  <div class="invalid-feedback">El email es necesario.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                  <label for="floatingPassword">Contraseña</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="my-4">
+
+          <fieldset class="col-12">
+            <!--Input Groups (Addons y Botones) Evelyn Condoy -->
+            <h3>Input Groups (Addons y Botones)</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="form-label">Addon (antes)</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="addon-user">@</span>
+                  <input type="text" class="form-control" placeholder="Nombre de usuario">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Addon (después)</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="tudominio">
+                  <span class="input-group-text" id="addon-domain">.com</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Addon (ambos)</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" aria-label="Monto">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Botón (después)</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Buscar...">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="my-4">
+
+          <div class="col-12">
+            <!--Checks, Radios y Switch Evelyn Condoy -->
+            <h3>Checks, Radios y Switch</h3>
+          </div>
+          
+          <div class="col-md-4">
+            <h3>Checkboxes</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Opción 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Opción 2 (marcada)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+              <label class="form-check-label" for="flexCheckDisabled">
+                Opción 3 (deshabilitada)
+              </label>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <h3>Radios</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="grupoRadios" id="radioDefault1" checked>
+              <label class="form-check-label" for="radioDefault1">
+                Selección A
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="grupoRadios" id="radioDefault2">
+              <label class="form-check-label" for="radioDefault2">
+                Selección B
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="grupoRadios" id="radioDisabled" disabled>
+              <label class="form-check-label" for="radioDisabled">
+                Selección C (deshabilitada)
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!--Switch (Toggle) Evelyn Condoy -->
+            <h3>Switch (Toggle)</h3>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="switchToggle1">
+              <label class="form-check-label" for="switchToggle1">Activar modo oscuro</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="switchToggle2" checked>
+              <label class="form-check-label" for="switchToggle2">Permitir notificaciones (activado)</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="switchToggle3" disabled>
+              <label class="form-check-label" for="switchToggle3">Opción deshabilitada</label>
+            </div>
+          </div>
+          
+          <hr class="my-4">
+
+          <div class="col-md-6">
+            <!--File Input Evelyn Condoy -->
+            <h3>File Input</h3>
+            <label for="formFile" class="form-label">Subir currículum (PDF)</label>
+            <input class="form-control" type="file" id="formFile" required>
+            <div class="invalid-feedback">
+              Por favor, selecciona un archivo.
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <!--Range Input Evelyn Condoy -->
+            <h3>Range Input</h3>
+            <label for="customRange1" class="form-label">Nivel de satisfacción (0-10)</label>
+            <input type="range" class="form-range" id="customRange1" min="0" max="10" step="1">
+            <div id="rangeHelp" class="form-text">
+              Desliza para indicar qué tan conforme estás.
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <button class="btn btn-success" type="submit">Validar mis componentes</button>
+          </div>
+
+        </form>
       </section>
     </footer>
     <script src="public/vendor/bootstrap.bundle.min.js"></script>
